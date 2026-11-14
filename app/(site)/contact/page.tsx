@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Mail, MapPin, Phone, Clock } from 'lucide-react'
+import { BrandLogo } from '@/components/brand-logo'
 import { ContactForm } from '@/components/contact-form'
 import { Eyebrow, Section } from '@/components/section'
 import { PlaceholderNote } from '@/components/placeholder-note'
@@ -8,7 +9,7 @@ import { getSiteSettings } from '@/lib/settings'
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Request a consultation with SAMAR Solutions India for solar rooftop, EV charging, or renewable-energy EPC projects.',
+    'Request a consultation with SAMAR SOLUTIONS INDIA PVT. LTD. for solar rooftop, EV charging, or renewable-energy EPC projects.',
 }
 
 export const dynamic = 'force-dynamic'
@@ -32,8 +33,8 @@ export default function ContactPage() {
             Let’s discuss your solar, EV charging, or EPC project
           </h1>
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-ink-foreground/78 md:text-xl">
-            Share your site details and requirements. We’ll use them to understand your project and plan the
-            right next steps.
+            Share your site details and requirements with SAMAR SOLUTIONS INDIA PVT. LTD. We’ll use them to
+            understand your project and plan the right next steps.
           </p>
         </div>
       </section>
@@ -41,10 +42,11 @@ export default function ContactPage() {
       <Section className="bg-[linear-gradient(180deg,#ddebe1_0%,#e8dcc4_100%)] pt-16 md:pt-20">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-5">
+            <BrandLogo tone="dark" size="md" className="mb-7" />
             <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">Get in touch</h2>
             <p className="mt-3 max-w-md leading-relaxed text-muted-foreground">
-              Reach out for consultations, site assessments, and project discussions across solar, EV
-              charging, and EPC services.
+              Reach out to SAMAR SOLUTIONS INDIA PVT. LTD. for consultations, site assessments, and
+              project discussions across solar, EV charging, and EPC services.
             </p>
 
             <dl className="mt-8 space-y-4">

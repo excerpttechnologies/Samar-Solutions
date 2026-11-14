@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { ArrowUpRight, Handshake, Leaf, Lightbulb, ShieldCheck, Target, Users } from 'lucide-react'
+import { BrandLogo } from '@/components/brand-logo'
 import { CtaBand, JourneySteps } from '@/components/blocks'
 import { CtaLink } from '@/components/cta-link'
 import { PageHero } from '@/components/page-hero'
@@ -10,7 +11,7 @@ import { site } from '@/lib/site'
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Established in 2013, SAMAR Solutions India Pvt. Ltd. provides renewable-energy and sustainable-infrastructure solutions across the full project lifecycle.',
+    'Established in 2013, SAMAR SOLUTIONS INDIA PVT. LTD. provides renewable-energy and sustainable-infrastructure solutions across the full project lifecycle.',
 }
 
 const mission = [
@@ -42,9 +43,10 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="A trusted engineering partner for solar, EV charging, and sustainable infrastructure"
-        intro={`Established in ${site.established}, SAMAR Solutions India Pvt. Ltd. delivers renewable-energy and electric mobility infrastructure through practical engineering, disciplined execution, and long-term support.`}
-        image="/images/epc-engineering.png"
-        imageAlt="Engineers coordinating renewable energy project work"
+        intro={`Established in ${site.established}, SAMAR SOLUTIONS INDIA PVT. LTD. delivers renewable-energy and electric mobility infrastructure through practical engineering, disciplined execution, and long-term support.`}
+        image="/images/projects/03-elevated-rooftop-solar-urban.webp"
+        imageAlt="Elevated rooftop solar installation above an urban neighbourhood"
+        imageNote={null}
         ctaLabel="Get a Quote"
       />
 
@@ -55,7 +57,7 @@ export default function AboutPage() {
           <div className="lg:col-span-5">
             <div className="relative">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-[0_40px_90px_-45px_rgba(6,45,36,0.55)]">
-                <Image src="/images/hero-solar-rooftop.png" alt="Solar infrastructure representing SAMAR's work" fill sizes="(min-width:1024px) 40vw, 100vw" className="object-cover" />
+                <Image src="/images/projects/13-urban-terrace-solar-array.webp" alt="Rooftop solar array installed on an urban terrace" fill sizes="(min-width:1024px) 40vw, 100vw" className="object-cover" />
                 <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#062d24]/55 via-transparent to-transparent" />
               </div>
               <div className="absolute -bottom-6 -right-2 rounded-2xl border border-white/30 bg-white/35 p-5 shadow-xl backdrop-blur-xl md:-right-6">
@@ -66,13 +68,14 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="lg:col-span-7">
+            <BrandLogo tone="dark" size="md" className="mb-7" />
             <Eyebrow>About SAMAR</Eyebrow>
             <h2 className="mt-5 text-3xl font-extrabold leading-[1.06] tracking-tight text-[#062d24] md:text-4xl lg:text-5xl">
               Building cleaner energy and smarter mobility infrastructure with engineering credibility
             </h2>
             <div className="mt-7 space-y-5 text-base leading-relaxed text-[#1b3a31]/80 md:text-lg">
               <p>
-                SAMAR Solutions India Pvt. Ltd. works with businesses, institutions, and communities to plan
+                SAMAR SOLUTIONS INDIA PVT. LTD. works with businesses, institutions, and communities to plan
                 and deliver solar rooftop systems, EV charging infrastructure, and renewable-energy projects.
                 As an EPC company, we bring engineering, procurement, and construction together under one
                 accountable team.
@@ -86,7 +89,7 @@ export default function AboutPage() {
             <div className="mt-8 flex items-start gap-3 rounded-3xl border border-[#087a55]/20 bg-gradient-to-r from-[#087a55]/12 to-[#087f83]/10 p-5">
               <Handshake aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-[#087a55]" />
               <p className="text-sm leading-relaxed text-[#062d24]/85">
-                <span className="font-semibold">{site.partnership}.</span> SAMAR Solutions India Pvt. Ltd.
+                <span className="font-semibold">{site.partnership}.</span> SAMAR SOLUTIONS INDIA PVT. LTD.
                 is an independent company; this website is SAMAR’s own and is not a TATA Power website.
               </p>
             </div>
@@ -145,7 +148,7 @@ export default function AboutPage() {
           <div className="lg:col-span-7">
             <div className="relative overflow-hidden rounded-[2rem]">
               <div className="relative aspect-[16/11]">
-                <Image src="/images/ev-charging.png" alt="EV charging and renewable energy infrastructure" fill sizes="(min-width:1024px) 55vw, 100vw" className="object-cover" />
+                <Image src="/images/projects/14-commercial-rooftop-solar-installation.webp" alt="Commercial rooftop solar array installed by SAMAR" fill sizes="(min-width:1024px) 55vw, 100vw" className="object-cover" />
                 <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#062d24]/70 via-[#062d24]/20 to-transparent" />
               </div>
               <div className="absolute inset-x-0 bottom-0 grid gap-3 p-4 sm:grid-cols-3 sm:p-6">

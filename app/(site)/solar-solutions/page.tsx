@@ -10,7 +10,7 @@ import { solarAudiences, solarScope } from '@/lib/site'
 export const metadata: Metadata = {
   title: 'Solar Rooftop Solutions',
   description:
-    'Comprehensive solar rooftop solutions in India — site survey, system design, quality components, installation, net-metering assistance, and O&M from SAMAR Solutions.',
+    'Comprehensive solar rooftop solutions in India — site survey, system design, quality components, installation, net-metering assistance, and O&M from SAMAR SOLUTIONS INDIA PVT. LTD.',
 }
 
 const applications = [
@@ -26,9 +26,10 @@ export default function SolarPage() {
       <PageHero
         eyebrow="Solar Solutions"
         title="Solar rooftop solutions engineered for performance, reliability, and long-term value"
-        intro="SAMAR provides comprehensive solar rooftop solutions — from site survey and system design to supply, installation, net-metering assistance, and ongoing maintenance."
-        image="/images/hero-solar-rooftop.png"
-        imageAlt="Solar rooftop installation"
+        intro="SAMAR SOLUTIONS INDIA PVT. LTD. provides comprehensive solar rooftop solutions — from site survey and system design to supply, installation, net-metering assistance, and ongoing maintenance."
+        image="/images/projects/03-elevated-rooftop-solar-urban.webp"
+        imageAlt="Elevated rooftop solar installation above an urban neighbourhood"
+        imageNote={null}
       />
 
       <Section labelledBy="solar-intro-title" className="bg-[linear-gradient(135deg,#e8dcc4_0%,#ddebe1_50%,#f6e7b8_100%)]">
@@ -116,7 +117,7 @@ export default function SolarPage() {
               site survey and feasibility analysis, and do not guarantee specific outcomes in advance.
             </Disclaimer>
             <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] bg-muted">
-              <Image src="/images/epc-engineering.png" alt="Engineering review for solar project planning" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+              <Image src="/images/projects/20-rooftop-solar-residential-view.webp" alt="Solar panels installed on a rooftop overlooking a residential area" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             </div>
             <div className="flex flex-wrap gap-3">
               <CtaLink href="/contact" arrow>

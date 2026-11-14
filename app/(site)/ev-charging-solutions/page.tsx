@@ -10,7 +10,7 @@ import { evAudiences, evScope } from '@/lib/site'
 export const metadata: Metadata = {
   title: 'EV Charging Solutions',
   description:
-    'EV charging infrastructure in India — AC chargers, DC fast chargers, site assessment, electrical infrastructure, installation, and annual maintenance from SAMAR Solutions.',
+    'EV charging infrastructure in India — AC chargers, DC fast chargers, site assessment, electrical infrastructure, installation, and annual maintenance from SAMAR SOLUTIONS INDIA PVT. LTD.',
 }
 
 const chargingTypes = [

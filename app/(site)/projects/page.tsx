@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 export const metadata: Metadata = {
   title: 'Projects',
   description:
-    'Solar rooftop, EV charging, and EPC project case studies from SAMAR Solutions India.',
+    'Solar rooftop, EV charging, and EPC project case studies from SAMAR SOLUTIONS INDIA PVT. LTD.',
 }
 
 export const dynamic = 'force-dynamic'

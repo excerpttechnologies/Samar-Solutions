@@ -8,6 +8,7 @@ export function PageHero({
   intro,
   image,
   imageAlt,
+  imageNote,
   cta = true,
   ctaLabel = 'Request a Consultation',
   ctaHref = '/contact',
@@ -17,6 +18,7 @@ export function PageHero({
   intro: string
   image?: string
   imageAlt?: string
+  imageNote?: string | null
   cta?: boolean
   ctaLabel?: string
   ctaHref?: string
@@ -74,7 +76,9 @@ export function PageHero({
                 <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
               </div>
               <figcaption className="mt-3 text-xs text-ink-foreground/55">
-                Representative image, not a SAMAR project.
+                {imageNote === null
+                  ? null
+                  : (imageNote ?? 'Representative image, not a SAMAR project.')}
               </figcaption>
             </figure>
           )}

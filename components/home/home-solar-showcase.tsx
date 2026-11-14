@@ -42,12 +42,12 @@ export function HomeSolarShowcase() {
         <div className="relative lg:col-span-7">
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-muted shadow-[0_35px_80px_-45px_rgba(15,23,42,0.5)]">
-              <Image src="/images/hero-solar-rooftop.png" alt="Commercial solar rooftop installation" fill sizes="(min-width: 1024px) 35vw, 50vw" className="object-cover" />
+              <Image src="/images/projects/10-long-commercial-rooftop-solar.webp" alt="Long solar array installed across a commercial rooftop" fill sizes="(min-width: 1024px) 35vw, 50vw" className="object-cover" />
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-ink/35 to-transparent" />
             </div>
             <div className="grid gap-4">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] bg-muted">
-                <Image src="/images/epc-engineering.png" alt="Engineering planning for a solar project" fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover" />
+                <Image src="/images/projects/19-commercial-solar-service-walkway.webp" alt="Commercial rooftop solar array with a service walkway" fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover" />
               </div>
               <div className="relative overflow-hidden rounded-[2rem] border border-border/70 bg-gradient-to-br from-primary to-emerald p-6 text-primary-foreground">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">What we deliver</p>

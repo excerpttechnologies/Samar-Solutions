@@ -1,6 +1,7 @@
 export const site = {
-  name: 'SAMAR Solutions India Pvt. Ltd.',
+  name: 'SAMAR SOLUTIONS INDIA PVT. LTD.',
   shortName: 'SAMAR Solutions',
+  legalName: 'SAMAR SOLUTIONS INDIA PVT. LTD.',
   established: 2013,
   partnership: 'Authorized Channel Partner of TATA Power Renewable Energy Ltd.',
   /**
@@ -167,7 +168,7 @@ export const projectJourney = [
 export const differentiators = [
   {
     title: 'Authorized TATA Power Renewable Energy partner',
-    body: 'SAMAR Solutions is an Authorized Channel Partner of TATA Power Renewable Energy Ltd.',
+    body: 'SAMAR SOLUTIONS INDIA PVT. LTD. is an Authorized Channel Partner of TATA Power Renewable Energy Ltd.',
   },
   {
     title: 'More than a decade of experience',

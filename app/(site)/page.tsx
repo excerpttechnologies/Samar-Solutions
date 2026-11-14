@@ -1,5 +1,6 @@
 import { CtaBand } from '@/components/blocks'
 import { HomeEvShowcase } from '@/components/home/home-ev-showcase'
+import { HomeGallery } from '@/components/home/home-gallery'
 import { HomeHero } from '@/components/home/home-hero'
 import { HomeIndustries } from '@/components/home/home-industries'
 import { HomeIntro } from '@/components/home/home-intro'
@@ -21,6 +22,7 @@ export default function HomePage() {
       <HomeEvShowcase />
       <HomeWhy />
       <HomeProjects />
+      <HomeGallery />
       <HomeIndustries />
       <HomeJourney />
       <CtaBand />

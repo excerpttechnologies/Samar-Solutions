@@ -6,7 +6,7 @@ import { Section, SectionHeading } from '@/components/section'
 
 export const metadata: Metadata = {
   title: 'Careers',
-  description: 'Build a career in renewable energy and EV infrastructure with SAMAR Solutions India.',
+  description: 'Build a career in renewable energy and EV infrastructure with SAMAR SOLUTIONS INDIA PVT. LTD.',
 }
 
 const areas = [

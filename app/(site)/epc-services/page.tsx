@@ -26,9 +26,10 @@ export default function EpcPage() {
       <PageHero
         eyebrow="EPC Services"
         title="Engineering, procurement, and construction for renewable-energy infrastructure"
-        intro="As an engineering, procurement, and construction partner, SAMAR takes responsibility for projects from design to handover — and supports them after commissioning."
-        image="/images/epc-engineering.png"
-        imageAlt="Engineers coordinating project execution"
+        intro="As an engineering, procurement, and construction partner, SAMAR SOLUTIONS INDIA PVT. LTD. takes responsibility for projects from design to handover — and supports them after commissioning."
+        image="/images/projects/04-rooftop-solar-mounting-structure.webp"
+        imageAlt="Solar mounting structure under installation on a rooftop"
+        imageNote={null}
       />
 
       <Section labelledBy="epc-strengths-title" className="bg-[linear-gradient(135deg,#ddebe1_0%,#cfe7e3_45%,#e8dcc4_100%)]">
@@ -88,7 +89,7 @@ export default function EpcPage() {
         <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
           <figure className="relative lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-muted">
-              <Image src="/images/epc-engineering.png" alt="EPC engineering and site coordination" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+              <Image src="/images/projects/05-industrial-roof-solar-inspection.webp" alt="Technician inspecting a solar installation on an industrial roof" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             </div>
           </figure>
           <div className="lg:col-span-7">
@@ -96,7 +97,7 @@ export default function EpcPage() {
               id="epc-apply-title"
               eyebrow="Where We Apply It"
               title="EPC for solar rooftop and EV charging projects"
-              intro="SAMAR applies EPC capabilities across renewable-energy and electric mobility infrastructure, delivering solutions that are engineered for site conditions and long-term use."
+              intro="SAMAR SOLUTIONS INDIA PVT. LTD. applies EPC capabilities across renewable-energy and electric mobility infrastructure, delivering solutions that are engineered for site conditions and long-term use."
             />
             <div className="mt-8 flex flex-wrap gap-3">
               <CtaLink href="/solar-solutions" variant="outline" arrow>

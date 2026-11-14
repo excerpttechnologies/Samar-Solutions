@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
+import { BrandLogo } from '@/components/brand-logo'
 import { CtaLink } from '@/components/cta-link'
 import { site } from '@/lib/site'
 
@@ -7,7 +8,7 @@ export function HomeHero() {
   return (
     <section aria-labelledby="hero-title" className="relative isolate min-h-[94svh] overflow-hidden bg-[#062d24] text-ink-foreground">
       <Image
-        src="/images/hero-solar-rooftop.png"
+        src="/images/projects/02-elevated-commercial-solar-array.webp"
         alt=""
         fill
         priority
@@ -22,18 +23,19 @@ export function HomeHero() {
         <div className="lg:col-span-7 xl:col-span-8">
           <p className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/90 backdrop-blur">
             <span aria-hidden="true" className="size-1.5 rounded-full bg-[#a6e65a] shadow-[0_0_0_4px_rgba(166,230,90,0.16)]" />
-            Renewable Energy • EV Infrastructure • EPC
+            Solar Energy • EV Infrastructure • EPC
           </p>
           <h1
             id="hero-title"
-            className="mt-7 max-w-4xl animate-fade-up text-5xl font-extrabold leading-[0.98] tracking-tight [animation-delay:80ms] md:text-6xl lg:text-7xl xl:text-[5.2rem]"
+            className="mt-7 max-w-4xl animate-fade-up text-[2.65rem] font-extrabold leading-[1.02] tracking-tight [animation-delay:80ms] sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.8rem]"
           >
-            Powering a Smarter,
-            <span className="block text-gradient-gold">Greener Tomorrow.</span>
+            Powering a Sustainable Future with
+            <span className="block text-gradient-gold">Smarter Solar Solutions.</span>
           </h1>
           <p className="mt-7 max-w-2xl animate-fade-up text-pretty text-lg leading-relaxed text-white/82 [animation-delay:160ms] md:text-xl">
-            Delivering reliable solar energy, EV charging, and integrated engineering solutions for a
-            sustainable future.
+            SAMAR SOLUTIONS INDIA PVT. LTD. is committed to delivering professional solar energy
+            solutions through quality installations, reliable engineering, and sustainable energy
+            practices.
           </p>
           <div className="mt-10 flex animate-fade-up flex-wrap gap-3 [animation-delay:240ms]">
             <CtaLink href="/contact" variant="accent" arrow>
@@ -62,12 +64,17 @@ export function HomeHero() {
 
         <div className="hidden lg:col-span-5 lg:block xl:col-span-4">
           <div className="animate-fade-up animate-float-soft rounded-3xl border border-white/15 bg-[linear-gradient(135deg,rgba(255,255,255,0.16),rgba(166,230,90,0.08))] p-6 shadow-2xl backdrop-blur-xl [animation-delay:220ms]">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f4c65e]">Trusted Partner</p>
-            <p className="mt-4 text-lg font-semibold leading-snug text-white">
+            <div className="flex items-center justify-between gap-4">
+              <BrandLogo tone="light" size="sm" linked={false} />
+              <span className="shrink-0 rounded-full border border-[#f4c65e]/25 bg-[#f4c65e]/10 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.18em] text-[#f4c65e]">
+                Trusted Partner
+              </span>
+            </div>
+            <p className="mt-6 text-lg font-semibold leading-snug text-white">
               {site.partnership}
             </p>
             <p className="mt-3 text-sm leading-relaxed text-white/70">
-              SAMAR Solutions India Pvt. Ltd. is an independent company delivering solar, EV charging, and
+              SAMAR SOLUTIONS INDIA PVT. LTD. is an independent company delivering solar, EV charging, and
               renewable-energy infrastructure projects across India.
             </p>
             <div className="mt-6 space-y-3 border-t border-white/10 pt-5 text-sm text-white/80">

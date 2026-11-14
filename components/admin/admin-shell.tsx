@@ -223,7 +223,7 @@ function AdminShellInner({
               <div>
                 <p className="text-sm font-bold">Admin Panel</p>
                 <p className="hidden text-xs text-muted-foreground sm:block">
-                  SAMAR Solutions India
+                  SAMAR SOLUTIONS INDIA
                 </p>
               </div>
             </div>

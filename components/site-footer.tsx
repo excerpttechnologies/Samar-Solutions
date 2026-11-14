@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { mainNav, serviceNav, site } from '@/lib/site'
 import type { SiteSettings } from '@/lib/types'
-import { Wordmark } from './wordmark'
+import { BrandLogo } from './brand-logo'
 import { PlaceholderNote } from './placeholder-note'
 
 export function SiteFooter({ settings }: { settings?: SiteSettings }) {
@@ -17,7 +17,7 @@ export function SiteFooter({ settings }: { settings?: SiteSettings }) {
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.18),transparent_45%),radial-gradient(ellipse_at_bottom_left,rgba(245,158,11,0.12),transparent_40%)]" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-16 md:grid-cols-2 md:px-6 lg:grid-cols-12 lg:py-20">
         <div className="lg:col-span-5">
-          <Wordmark tone="light" />
+          <BrandLogo tone="light" size="lg" />
           <p className="mt-6 max-w-md text-sm leading-relaxed text-ink-foreground/75 md:text-base">
             Engineering, procurement, and construction for solar rooftop systems, EV charging
             infrastructure, and renewable-energy projects. Established in {site.established}.
@@ -86,7 +86,7 @@ export function SiteFooter({ settings }: { settings?: SiteSettings }) {
       </div>
       <div className="relative border-t border-ink-foreground/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-xs text-ink-foreground/55 md:flex-row md:items-center md:justify-between md:px-6">
-          <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {site.legalName} All Rights Reserved.</p>
           <p>Solar • EV Charging • EPC • Sustainable Infrastructure</p>
         </div>
       </div>

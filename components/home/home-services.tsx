@@ -9,8 +9,8 @@ const services = [
     title: 'Solar Rooftop Solutions',
     body: 'Survey, design, supply, installation, net-metering assistance, and maintenance for rooftop solar systems.',
     icon: Sun,
-    image: '/images/hero-solar-rooftop.png',
-    alt: 'Solar panels installed on a rooftop',
+    image: '/images/projects/01-rooftop-solar-array-flat-roof.webp',
+    alt: 'Solar panels installed across a flat rooftop',
   },
   {
     href: '/ev-charging-solutions',
@@ -25,8 +25,8 @@ const services = [
     title: 'EPC Services',
     body: 'Engineering, procurement, construction, commissioning, monitoring, and technical support under one partner.',
     icon: Cable,
-    image: '/images/epc-engineering.png',
-    alt: 'Engineers coordinating an EPC project',
+    image: '/images/projects/04-rooftop-solar-mounting-structure.webp',
+    alt: 'Solar mounting structure under installation on a rooftop',
   },
 ]
 
@@ -91,7 +91,6 @@ export function HomeServices() {
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-xs text-muted-foreground">Images are representative and do not depict SAMAR projects.</p>
       </div>
     </Section>
   )

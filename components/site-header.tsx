@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { mainNav, site } from '@/lib/site'
 import { cn } from '@/lib/utils'
-import { Wordmark } from './wordmark'
+import { BrandLogo } from './brand-logo'
 import { CtaLink } from './cta-link'
 
 export function SiteHeader({ partnership }: { partnership?: string }) {
@@ -72,7 +72,7 @@ export function SiteHeader({ partnership }: { partnership?: string }) {
         </div>
       </div>
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:px-6 lg:h-[4.75rem]">
-        <Wordmark tone="light" />
+        <BrandLogo tone="light" size="md" priority className="shrink-0" />
 
         <nav aria-label="Main" className="hidden xl:block">
           <ul className="flex items-center gap-0.5">

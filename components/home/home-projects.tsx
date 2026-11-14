@@ -39,7 +39,7 @@ export function HomeProjects() {
           id="home-projects-title"
           eyebrow="Featured Projects"
           title="Recent solar, EV charging, and EPC work"
-          intro="A selection of published project case studies delivered by SAMAR Solutions."
+          intro="A selection of published project case studies delivered by SAMAR SOLUTIONS INDIA PVT. LTD."
         />
         <Link
           href="/projects"

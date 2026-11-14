@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { CheckCircle2 } from 'lucide-react'
+import { BrandLogo } from '@/components/brand-logo'
 import { CtaLink } from '@/components/cta-link'
 import { Eyebrow } from '@/components/section'
 import { site } from '@/lib/site'
@@ -19,8 +20,8 @@ export function HomeIntro() {
         <figure className="relative lg:col-span-5">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-muted shadow-[0_40px_90px_-50px_rgba(15,23,42,0.55)]">
             <Image
-              src="/images/epc-engineering.png"
-              alt="Engineers reviewing renewable energy project plans on site"
+              src="/images/projects/05-industrial-roof-solar-inspection.webp"
+              alt="Technician inspecting a solar array installed on an industrial rooftop"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
@@ -36,12 +37,13 @@ export function HomeIntro() {
         </figure>
 
         <div className="lg:col-span-7">
+          <BrandLogo tone="dark" size="md" className="mb-7" />
           <Eyebrow>About SAMAR</Eyebrow>
           <h2 id="intro-title" className="mt-5 text-3xl font-extrabold leading-[1.08] tracking-tight md:text-4xl lg:text-5xl">
             Engineering credibility, practical execution, and long-term energy value.
           </h2>
           <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-            SAMAR Solutions India Pvt. Ltd. helps businesses, institutions, and communities adopt clean
+            SAMAR SOLUTIONS INDIA PVT. LTD. helps businesses, institutions, and communities adopt clean
             energy and electric mobility. We manage the full project lifecycle as one accountable partner
             from site assessment to long-term maintenance and technical support.
           </p>
