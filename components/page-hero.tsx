@@ -10,8 +10,8 @@ export function PageHero({
   imageAlt,
   imageNote,
   cta = true,
-  ctaLabel = 'Request a Consultation',
-  ctaHref = '/contact',
+  ctaLabel = 'Call 8105 250 250',
+  ctaHref = 'tel:+918105250250',
 }: {
   eyebrow: string
   title: string
@@ -55,9 +55,6 @@ export function PageHero({
               <div className="mt-10 flex flex-wrap gap-3">
                 <CtaLink href={ctaHref} variant="accent" arrow>
                   {ctaLabel}
-                </CtaLink>
-                <CtaLink href="/projects" variant="outline-light">
-                  View Projects
                 </CtaLink>
               </div>
             )}

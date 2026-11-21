@@ -5,7 +5,7 @@ import { CtaLink } from '@/components/cta-link'
 import { Section, SectionHeading } from '@/components/section'
 import { galleryCategories, galleryPhotos } from '@/lib/gallery'
 
-const featuredIds = [5, 1, 18, 14, 28, 21]
+const featuredIds = [2, 1, 18, 14, 28, 21]
 
 const categoryLabels = new Map(galleryCategories.map((category) => [category.slug, category.label]))
 
@@ -85,7 +85,7 @@ export function HomeGallery() {
         <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
           <p className="flex items-center gap-2 text-sm text-white/65">
             <Images aria-hidden="true" className="size-4 text-[#a6e65a]" />
-            30 photographs across rooftop, commercial, residential, and site-work categories.
+            31 photographs across rooftop, commercial, residential, solar pump, and site-work categories.
           </p>
           <Link
             href="/gallery"

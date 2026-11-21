@@ -9,12 +9,36 @@ export const site = {
    * any value left as null renders as a clearly labelled placeholder.
    */
   contact: {
-    phone: null as string | null,
+    phone: '8105 250 250' as string | null,
     email: null as string | null,
     address: null as string | null,
     hours: null as string | null,
   },
 }
+
+/** The only contact numbers approved for use anywhere on the site. */
+export const phones = [
+  { label: '8105 250 250', href: 'tel:+918105250250' },
+  { label: '8197 241 705', href: 'tel:+918197241705' },
+] as const
+
+export const socialLinks = [
+  {
+    id: 'google',
+    label: 'Samar Solutions on Google',
+    href: 'https://share.google/wPHanaAvRZuVFzubq',
+  },
+  {
+    id: 'youtube',
+    label: 'Samar Solutions on YouTube',
+    href: 'https://www.youtube.com/@samarsolutionsindiaprivate261',
+  },
+  {
+    id: 'instagram',
+    label: 'Samar Solutions on Instagram',
+    href: 'https://www.instagram.com/samarsolutions221/',
+  },
+] as const
 
 export const mainNav = [
   { href: '/', label: 'Home' },
@@ -22,10 +46,8 @@ export const mainNav = [
   { href: '/solar-solutions', label: 'Solar Rooftop' },
   { href: '/ev-charging-solutions', label: 'EV Charging' },
   { href: '/epc-services', label: 'EPC Services' },
-  { href: '/projects', label: 'Projects' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/careers', label: 'Careers' },
-  { href: '/contact', label: 'Contact Us' },
 ] as const
 
 export const serviceNav = [
