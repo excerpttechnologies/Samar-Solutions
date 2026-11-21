@@ -7,6 +7,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      { source: '/projects', destination: '/gallery', statusCode: 301 },
+      { source: '/projects/:path*', destination: '/gallery', statusCode: 301 },
+      { source: '/contact', destination: '/', statusCode: 301 },
+      { source: '/contact/:path*', destination: '/', statusCode: 301 },
+    ]
+  },
   async headers() {
     return [
       {

@@ -49,7 +49,7 @@ export default async function AdminLoginPage() {
           </p>
         </div>
         <p className="relative text-xs text-ink-foreground/50">
-          © {new Date().getFullYear()} SAMAR Solutions India Pvt. Ltd.
+          © {new Date().getFullYear()} SAMAR SOLUTIONS INDIA PVT. LTD.
         </p>
       </section>
 

@@ -10,7 +10,7 @@ const differentiators = [
   {
     icon: Handshake,
     title: 'Authorized TATA Power Renewable Energy partnership',
-    body: 'SAMAR Solutions is an Authorized Channel Partner of TATA Power Renewable Energy Ltd.',
+    body: 'SAMAR SOLUTIONS INDIA PVT. LTD. is an Authorized Channel Partner of TATA Power Renewable Energy Ltd.',
   },
   {
     icon: Layers,

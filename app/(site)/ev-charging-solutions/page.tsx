@@ -10,7 +10,7 @@ import { evAudiences, evScope } from '@/lib/site'
 export const metadata: Metadata = {
   title: 'EV Charging Solutions',
   description:
-    'EV charging infrastructure in India — AC chargers, DC fast chargers, site assessment, electrical infrastructure, installation, and annual maintenance from SAMAR Solutions.',
+    'EV charging infrastructure in India — AC chargers, DC fast chargers, site assessment, electrical infrastructure, installation, and annual maintenance from SAMAR SOLUTIONS INDIA PVT. LTD.',
 }
 
 const chargingTypes = [
@@ -129,8 +129,8 @@ export default function EvPage() {
               requirements with our team to confirm which equipment is available for your project.
             </Disclaimer>
             <div className="flex flex-wrap gap-3">
-              <CtaLink href="/contact" arrow>
-                Discuss Your Project
+              <CtaLink href="tel:+918105250250" arrow>
+                Call Our Team
               </CtaLink>
               <CtaLink href="/epc-services" variant="outline">
                 How We Deliver Projects
