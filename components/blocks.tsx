@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react'
 import { projectJourney } from '@/lib/site'
 import { cn } from '@/lib/utils'
+import { CtaLink } from './cta-link'
 
 export function ScopeGrid({ items }: { items: { title: string; body: string }[] }) {
   return (
@@ -97,7 +98,7 @@ export function CtaBand({
       <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(120deg,#062d24_0%,#087a55_45%,#087f83_70%,#151c1b_100%)]" />
       <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(244,198,94,0.22),transparent_35%),radial-gradient(ellipse_at_bottom_right,rgba(166,230,90,0.18),transparent_35%)]" />
       <div aria-hidden="true" className="absolute inset-0 opacity-[0.1] [background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] [background-size:56px_56px]" />
-      <div className="relative mx-auto max-w-7xl px-4 md:px-6">
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-4 md:flex-row md:items-end md:justify-between md:px-6">
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">
             <span aria-hidden="true" className="h-px w-10 bg-accent/70" />
@@ -109,6 +110,14 @@ export function CtaBand({
           <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-ink-foreground/75 md:text-lg">
             {body}
           </p>
+        </div>
+        <div className="flex shrink-0 flex-wrap gap-3">
+          <CtaLink href="/contact" variant="accent" arrow>
+            Discuss Your Project
+          </CtaLink>
+          <CtaLink href="/contact" variant="outline-light">
+            Contact Us
+          </CtaLink>
         </div>
       </div>
     </section>

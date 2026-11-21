@@ -20,8 +20,8 @@ const sizes = {
   },
   md: {
     image: 'h-10 md:h-11',
-    name: 'text-[0.9rem] tracking-[0.19em] md:text-[0.96rem]',
-    suffix: 'text-[0.6rem] tracking-[0.24em] md:text-[0.63rem]',
+    name: 'text-[0.78rem] tracking-[0.19em] md:text-[0.84rem]',
+    suffix: 'text-[0.55rem] tracking-[0.24em] md:text-[0.58rem]',
     gap: 'gap-3',
   },
   lg: {

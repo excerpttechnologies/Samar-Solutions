@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRight, Cable, Sun, Zap } from 'lucide-react'
+import { ArrowUpRight, Cable, Cog, Settings, Sun, Wrench, Zap } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
 
 const services = [
@@ -20,15 +20,21 @@ const services = [
     image: '/images/ev-charging.png',
     alt: 'Electric vehicle charging infrastructure',
   },
+  {
+    href: '/epc-services',
+    title: 'EPC Services',
+    body: 'Engineering, procurement, construction, commissioning, monitoring, and technical support under one partner.',
+    icon: Cable,
+    image: '/images/projects/04-rooftop-solar-mounting-structure.webp',
+    alt: 'Solar mounting structure under installation on a rooftop',
+  },
 ]
 
-const epc = {
-  href: '/epc-services',
-  title: 'EPC Services',
-  body: 'Engineering, procurement, construction, commissioning, monitoring, and technical support under one partner.',
-  image: '/images/projects/04-rooftop-solar-mounting-structure.webp',
-  alt: 'Solar mounting structure under installation on a rooftop',
-}
+const capabilities = [
+  { title: 'Engineering Design', icon: Cog, href: '/epc-services' },
+  { title: 'Installation & Commissioning', icon: Wrench, href: '/epc-services' },
+  { title: 'Operations & Maintenance', icon: Settings, href: '/solar-solutions' },
+]
 
 export function HomeServices() {
   return (
@@ -68,33 +74,23 @@ export function HomeServices() {
               </div>
             </Link>
           ))}
-
-          <Link
-            href={epc.href}
-            className="group grid overflow-hidden rounded-[2rem] border border-border/70 bg-card/70 shadow-[0_30px_70px_-45px_rgba(15,23,42,0.45)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_40px_90px_-45px_rgba(15,23,42,0.5)] md:grid-cols-2 lg:col-span-12"
-          >
-            <div className="flex flex-col justify-center p-7 md:p-10">
-              <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <Cable aria-hidden="true" className="size-5" />
-              </span>
-              <h3 className="mt-5 text-2xl font-bold leading-tight tracking-tight md:text-3xl">{epc.title}</h3>
-              <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground md:text-[15px]">{epc.body}</p>
-              <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                Explore service
-                <ArrowUpRight aria-hidden="true" className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-              </span>
-            </div>
-            <div className="relative aspect-[16/9] md:aspect-auto md:min-h-[22rem]">
-              <Image
-                src={epc.image}
-                alt={epc.alt}
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-          </Link>
         </div>
+
+        <ul className="mt-5 grid gap-4 md:grid-cols-3">
+          {capabilities.map((item) => (
+            <li key={item.title}>
+              <Link href={item.href} className="group flex h-full items-center justify-between gap-4 rounded-2xl border border-border/70 bg-card/80 p-5 transition-all hover:-translate-y-0.5 hover:border-primary/20 hover:bg-background">
+                <span className="flex items-center gap-3">
+                  <span className="inline-flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <item.icon aria-hidden="true" className="size-4" />
+                  </span>
+                  <span className="font-heading text-base font-bold tracking-tight">{item.title}</span>
+                </span>
+                <ArrowUpRight aria-hidden="true" className="size-4 text-muted-foreground transition-all group-hover:text-primary" />
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </Section>
   )

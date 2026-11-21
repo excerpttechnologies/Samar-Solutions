@@ -5,7 +5,6 @@ export type GalleryCategorySlug =
   | 'structures-mounting'
   | 'pole-foundation'
   | 'solar-installations'
-  | 'solar-pump'
 
 export type GalleryCategory = {
   slug: GalleryCategorySlug
@@ -54,11 +53,6 @@ export const galleryCategories: GalleryCategory[] = [
     slug: 'solar-installations',
     label: 'Solar Panel Installations',
     description: 'Close views of completed solar panel installations.'
-  },
-  {
-    slug: 'solar-pump',
-    label: 'Solar Pump',
-    description: 'Solar-powered water pump installations for agricultural sites.'
   }
 ]
 
@@ -367,16 +361,6 @@ export const galleryPhotos: GalleryPhoto[] = [
     alt: 'A large solar panel array installed along a flat building roof.',
     caption: 'Large rooftop solar array',
     category: 'rooftop-solar'
-  },
-  {
-    id: 31,
-    src: '/images/gallery/solar-pump-farm-1200.webp',
-    thumbnail: '/images/gallery/solar-pump-farm-768.webp',
-    width: 1200,
-    height: 1600,
-    alt: 'Two farmers standing beneath a ground-mounted solar array installed by Samar Solutions for an agricultural water pump.',
-    caption: 'Solar Water Pump Installation — Agricultural Site',
-    category: 'solar-pump'
   }
 ]
 

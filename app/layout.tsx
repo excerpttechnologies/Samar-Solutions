@@ -1,7 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Manrope, Plus_Jakarta_Sans } from 'next/font/google'
-import { phones, site, socialLinks } from '@/lib/site'
+import { site } from '@/lib/site'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -10,18 +10,18 @@ const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-jakart
 
 export const metadata: Metadata = {
   title: {
-    default: 'The Future of Energy Is Solar | SAMAR Solutions',
+    default: `${site.name} | Solar Rooftop, EV Charging & EPC Services in India`,
     template: `%s | ${site.name}`,
   },
   description:
-    'Solar rooftop, EV charging, solar pumps, and solar lights across India — delivered by SAMAR SOLUTIONS INDIA PVT. LTD., an authorized Tata Power partner.',
+    'SAMAR SOLUTIONS INDIA PVT. LTD. delivers end-to-end solar rooftop solutions, EV charging infrastructure, and renewable-energy EPC services across India. Established 2013.',
   generator: 'v0.app',
   openGraph: {
     type: 'website',
     siteName: site.name,
-    title: 'The Future of Energy Is Solar | SAMAR Solutions',
+    title: 'Powering a Sustainable Future with Smarter Solar Solutions',
     description:
-      'Solar rooftop, EV charging, solar pumps, and solar lights — engineered and delivered across India by SAMAR Solutions.',
+      'End-to-end renewable energy and EV infrastructure solutions—from site assessment and design to installation, commissioning, and maintenance.',
     images: [
       {
         url: '/images/projects/02-elevated-commercial-solar-array.webp',
@@ -52,8 +52,6 @@ const organizationJsonLd = {
   name: site.legalName,
   logo: '/brand/samar-logo.png',
   foundingDate: '2013',
-  telephone: phones[0].href.replace('tel:', ''),
-  sameAs: socialLinks.map((link) => link.href),
   description:
     'Engineering, Procurement, and Construction (EPC) for solar rooftop systems, EV charging infrastructure, and renewable-energy projects in India.',
 }

@@ -106,8 +106,8 @@ export default function EpcPage() {
               <CtaLink href="/ev-charging-solutions" variant="outline" arrow>
                 EV Charging Infrastructure
               </CtaLink>
-              <CtaLink href="tel:+918105250250" arrow>
-                Call Our Team
+              <CtaLink href="/contact" arrow>
+                Discuss an EPC Project
               </CtaLink>
             </div>
           </div>

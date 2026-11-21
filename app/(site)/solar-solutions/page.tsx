@@ -120,8 +120,8 @@ export default function SolarPage() {
               <Image src="/images/projects/20-rooftop-solar-residential-view.webp" alt="Solar panels installed on a rooftop overlooking a residential area" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             </div>
             <div className="flex flex-wrap gap-3">
-              <CtaLink href="tel:+918105250250" arrow>
-                Call for a Site Survey
+              <CtaLink href="/contact" arrow>
+                Request a Site Survey
               </CtaLink>
               <CtaLink href="/ev-charging-solutions" variant="outline">
                 Pair Solar with EV Charging

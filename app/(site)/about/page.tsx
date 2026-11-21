@@ -47,7 +47,7 @@ export default function AboutPage() {
         image="/images/projects/03-elevated-rooftop-solar-urban.webp"
         imageAlt="Elevated rooftop solar installation above an urban neighbourhood"
         imageNote={null}
-        ctaLabel="Call 8105 250 250"
+        ctaLabel="Get a Quote"
       />
 
       <section className="relative overflow-hidden bg-[linear-gradient(135deg,#e8dcc4_0%,#ddebe1_45%,#d2e7da_100%)] py-20 md:py-28">
@@ -204,8 +204,8 @@ export default function AboutPage() {
           <JourneySteps />
         </div>
         <div className="mt-8 flex flex-wrap gap-3">
-          <CtaLink href="tel:+918105250250" variant="accent" arrow>Call 8105 250 250</CtaLink>
-          <CtaLink href="/gallery" variant="outline">View Gallery</CtaLink>
+          <CtaLink href="/contact" variant="accent" arrow>Get a Quote</CtaLink>
+          <CtaLink href="/projects" variant="outline">View Projects</CtaLink>
         </div>
       </Section>
 

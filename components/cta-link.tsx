@@ -30,15 +30,16 @@ export function CtaLink({
   arrow?: boolean
   className?: string
 }) {
-  const classes = cn(
-    'group inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold tracking-tight transition-all duration-300',
-    variant !== 'text' && 'h-12 px-6',
-    variants[variant],
-    className,
-  )
-
-  const content = (
-    <>
+  return (
+    <Link
+      href={href}
+      className={cn(
+        'group inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold tracking-tight transition-all duration-300',
+        variant !== 'text' && 'h-12 px-6',
+        variants[variant],
+        className,
+      )}
+    >
       {children}
       {arrow && (
         <ArrowRight
@@ -46,20 +47,6 @@ export function CtaLink({
           className="size-4 transition-transform duration-300 group-hover:translate-x-0.5"
         />
       )}
-    </>
-  )
-
-  if (/^(tel:|mailto:|https?:)/.test(href)) {
-    return (
-      <a href={href} className={classes}>
-        {content}
-      </a>
-    )
-  }
-
-  return (
-    <Link href={href} className={classes}>
-      {content}
     </Link>
   )
 }

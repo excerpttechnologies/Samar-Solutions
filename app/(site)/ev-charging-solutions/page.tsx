@@ -129,8 +129,8 @@ export default function EvPage() {
               requirements with our team to confirm which equipment is available for your project.
             </Disclaimer>
             <div className="flex flex-wrap gap-3">
-              <CtaLink href="tel:+918105250250" arrow>
-                Call Our Team
+              <CtaLink href="/contact" arrow>
+                Discuss Your Project
               </CtaLink>
               <CtaLink href="/epc-services" variant="outline">
                 How We Deliver Projects
