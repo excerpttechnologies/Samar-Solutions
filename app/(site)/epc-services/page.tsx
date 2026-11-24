@@ -5,6 +5,7 @@ import { CtaBand, JourneySteps, ScopeGrid } from '@/components/blocks'
 import { CtaLink } from '@/components/cta-link'
 import { PageHero } from '@/components/page-hero'
 import { Section, SectionHeading } from '@/components/section'
+import { CONTACT } from '@/lib/contact'
 import { epcScope } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ export default function EpcPage() {
         imageNote={null}
       />
 
-      <Section labelledBy="epc-strengths-title" className="bg-[linear-gradient(135deg,#ddebe1_0%,#cfe7e3_45%,#e8dcc4_100%)]">
+      <Section labelledBy="epc-strengths-title" className="bg-[linear-gradient(135deg,#ffffff_0%,#eef4fb_45%,#f5f7fa_100%)]">
         <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-5">
             <SectionHeading
@@ -56,7 +57,7 @@ export default function EpcPage() {
         </div>
       </Section>
 
-      <Section tone="soft" labelledBy="epc-scope-title" className="bg-[linear-gradient(135deg,#062d24_0%,#087f83_50%,#087a55_100%)]">
+      <Section tone="soft" labelledBy="epc-scope-title" className="bg-[linear-gradient(135deg,#073b70_0%,#239b68_50%,#00529b_100%)]">
         <SectionHeading
           id="epc-scope-title"
           tone="ink"
@@ -85,7 +86,7 @@ export default function EpcPage() {
         </div>
       </Section>
 
-      <Section labelledBy="epc-apply-title" className="bg-[linear-gradient(180deg,#e8dcc4_0%,#ddebe1_100%)]">
+      <Section labelledBy="epc-apply-title" className="bg-[linear-gradient(180deg,#f5f7fa_0%,#ffffff_100%)]">
         <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
           <figure className="relative lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-muted">
@@ -106,7 +107,7 @@ export default function EpcPage() {
               <CtaLink href="/ev-charging-solutions" variant="outline" arrow>
                 EV Charging Infrastructure
               </CtaLink>
-              <CtaLink href="tel:+918105250250" arrow>
+              <CtaLink href={`tel:${CONTACT.primary.tel}`} arrow>
                 Call Our Team
               </CtaLink>
             </div>

@@ -95,7 +95,7 @@ export function PhotoGallery() {
             className={cn(
               'inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition-all duration-300',
               filter === 'all'
-                ? 'border-[#f4c65e] bg-[#f4c65e] text-[#1b1408] shadow-[0_12px_30px_-14px_rgba(244,198,94,0.6)]'
+                ? 'border-[#f39a32] bg-[#f39a32] text-[#243447] shadow-[0_12px_30px_-14px_rgba(244,198,94,0.6)]'
                 : 'border-white/15 bg-white/5 text-white/80 hover:border-white/30 hover:bg-white/10 hover:text-white',
             )}
           >
@@ -103,7 +103,7 @@ export function PhotoGallery() {
             <span
               className={cn(
                 'rounded-full px-1.5 py-0.5 text-[10px] font-bold leading-none',
-                filter === 'all' ? 'bg-[#1b1408]/10' : 'bg-white/10 text-white/70',
+                filter === 'all' ? 'bg-[#243447]/10' : 'bg-white/10 text-white/70',
               )}
             >
               {galleryPhotos.length}
@@ -120,7 +120,7 @@ export function PhotoGallery() {
                 className={cn(
                   'inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition-all duration-300',
                   selected
-                    ? 'border-[#a6e65a] bg-[#a6e65a] text-[#0b2a20] shadow-[0_12px_30px_-14px_rgba(166,230,90,0.5)]'
+                    ? 'border-[#f39a32] bg-[#f39a32] text-[#243447] shadow-[0_12px_30px_-14px_rgba(166,230,90,0.5)]'
                     : 'border-white/15 bg-white/5 text-white/80 hover:border-white/30 hover:bg-white/10 hover:text-white',
                 )}
               >
@@ -128,7 +128,7 @@ export function PhotoGallery() {
                 <span
                   className={cn(
                     'rounded-full px-1.5 py-0.5 text-[10px] font-bold leading-none',
-                    selected ? 'bg-[#0b2a20]/10' : 'bg-white/10 text-white/70',
+                    selected ? 'bg-[#243447]/10' : 'bg-white/10 text-white/70',
                   )}
                 >
                   {categoryCount(category.slug)}
@@ -162,7 +162,7 @@ export function PhotoGallery() {
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-[#03120e]/85 via-[#03120e]/10 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100"
+                  className="absolute inset-0 bg-gradient-to-t from-[#061e3a]/85 via-[#061e3a]/10 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100"
                 />
                 <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/90 backdrop-blur">
                   {categoryLabels.get(photo.category)}
@@ -174,7 +174,7 @@ export function PhotoGallery() {
                   <p className="translate-y-1 text-sm font-semibold leading-snug text-white transition-transform duration-300 group-hover:translate-y-0 md:text-[15px]">
                     {photo.caption}
                   </p>
-                  <span className="mt-1.5 inline-flex items-center gap-1.5 text-[11px] font-medium text-[#f4c65e] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="mt-1.5 inline-flex items-center gap-1.5 text-[11px] font-medium text-[#f39a32] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     View full photograph
                     <ChevronRight aria-hidden="true" className="size-3.5" />
                   </span>
@@ -190,7 +190,7 @@ export function PhotoGallery() {
           role="dialog"
           aria-modal="true"
           aria-label={`${activePhoto.caption} — enlarged photograph`}
-          className="fixed inset-0 z-[100] flex animate-fade-in items-center justify-center bg-[#03120e]/95 p-3 backdrop-blur-md sm:p-6"
+          className="fixed inset-0 z-[100] flex animate-fade-in items-center justify-center bg-[#061e3a]/95 p-3 backdrop-blur-md sm:p-6"
           onClick={() => setActiveId(null)}
           onTouchStart={(event) => {
             swipeStartRef.current = event.touches[0]?.clientX ?? null
@@ -208,7 +208,7 @@ export function PhotoGallery() {
           >
             <div className="flex items-center justify-between gap-4 pb-3 text-white">
               <div className="min-w-0">
-                <p className="truncate text-[10px] font-semibold uppercase tracking-[0.18em] text-[#a6e65a]">
+                <p className="truncate text-[10px] font-semibold uppercase tracking-[0.18em] text-[#f39a32]">
                   {categoryLabels.get(activePhoto.category)}
                 </p>
                 <p className="mt-1 truncate text-sm font-semibold text-white/90">{activePhoto.caption}</p>

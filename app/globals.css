@@ -41,37 +41,37 @@
 
 :root {
   color-scheme: light;
-  /* Soft sage-tinted base (no plain white pages) */
-  --background: #e3ece5;
-  --foreground: #151c1b;
-  --card: #f1ede3;
-  --card-foreground: #151c1b;
-  --popover: #f1ede3;
-  --popover-foreground: #151c1b;
-  /* Emerald primary */
-  --primary: #087a55;
-  --primary-foreground: #f3fff8;
-  /* Warm sand / sage secondary surfaces */
-  --secondary: #dce9df;
-  --secondary-foreground: #062d24;
-  --muted: #d6e3da;
-  --muted-foreground: #355148;
-  /* Warm amber accent */
-  --accent: #f2a541;
-  --accent-foreground: #1b1408;
-  --emerald: #087a55;
-  --teal: #087f83;
-  --lime: #a6e65a;
-  --gold: #f4c65e;
-  --sand: #e8dcc4;
-  --sage: #ddebe1;
+  /* Clean white base with Tata-inspired blue corporate accents */
+  --background: #ffffff;
+  --foreground: #243447;
+  --card: #ffffff;
+  --card-foreground: #243447;
+  --popover: #ffffff;
+  --popover-foreground: #243447;
+  /* Primary Tata-inspired blue */
+  --primary: #00529b;
+  --primary-foreground: #ffffff;
+  /* Light grey surfaces */
+  --secondary: #f5f7fa;
+  --secondary-foreground: #073b70;
+  --muted: #f5f7fa;
+  --muted-foreground: #687789;
+  /* Promotional orange accent */
+  --accent: #f39a32;
+  --accent-foreground: #243447;
+  --emerald: #239b68;
+  --teal: #239b68;
+  --lime: #239b68;
+  --gold: #f39a32;
+  --sand: #f5f7fa;
+  --sage: #f5f7fa;
   --destructive: #dc2626;
-  --border: rgba(6, 45, 36, 0.14);
-  --input: rgba(6, 45, 36, 0.18);
-  --ring: #087f83;
-  /* Deep forest / charcoal dark sections */
-  --ink: #062d24;
-  --ink-foreground: #f3f7f4;
+  --border: rgba(7, 59, 112, 0.12);
+  --input: rgba(7, 59, 112, 0.18);
+  --ring: #00529b;
+  /* Deep navy used for headings and small accent bands */
+  --ink: #073b70;
+  --ink-foreground: #ffffff;
   --radius: 0.75rem;
 }
 
@@ -151,13 +151,13 @@
     background-size: 3px 3px;
   }
   .text-gradient-gold {
-    background: linear-gradient(120deg, #f4c65e, #f2a541, #fff1c2);
+    background: linear-gradient(120deg, #00529b, #239b68, #f39a32);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .text-gradient-lime {
-    background: linear-gradient(120deg, #a6e65a, #d7ff9a);
+    background: linear-gradient(120deg, #239b68, #4fc08d);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

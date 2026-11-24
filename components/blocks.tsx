@@ -93,17 +93,17 @@ export function CtaBand({
   body?: string
 }) {
   return (
-    <section aria-labelledby="cta-band-title" className="relative overflow-hidden bg-[#062d24] py-20 text-ink-foreground md:py-24">
-      <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(120deg,#062d24_0%,#087a55_45%,#087f83_70%,#151c1b_100%)]" />
-      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(244,198,94,0.22),transparent_35%),radial-gradient(ellipse_at_bottom_right,rgba(166,230,90,0.18),transparent_35%)]" />
+    <section aria-labelledby="cta-band-title" className="relative overflow-hidden bg-[#073b70] py-20 text-ink-foreground md:py-24">
+      <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(120deg,#073b70_0%,#00529b_45%,#239b68_70%,#0b2a4a_100%)]" />
+      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.14),transparent_38%),radial-gradient(ellipse_at_bottom_right,rgba(243,154,50,0.22),transparent_35%)]" />
       <div aria-hidden="true" className="absolute inset-0 opacity-[0.1] [background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] [background-size:56px_56px]" />
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="max-w-3xl">
-          <p className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">
-            <span aria-hidden="true" className="h-px w-10 bg-accent/70" />
+          <p className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f39a32]">
+            <span aria-hidden="true" className="h-px w-10 bg-[#f39a32]/70" />
             Start Your Project
           </p>
-          <h2 id="cta-band-title" className="mt-5 text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl lg:text-5xl">
+          <h2 id="cta-band-title" className="mt-5 text-3xl font-extrabold leading-[1.05] tracking-tight text-white md:text-4xl lg:text-5xl">
             {title}
           </h2>
           <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-ink-foreground/75 md:text-lg">

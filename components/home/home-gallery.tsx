@@ -3,16 +3,43 @@ import Link from 'next/link'
 import { ArrowRight, Images } from 'lucide-react'
 import { CtaLink } from '@/components/cta-link'
 import { Section, SectionHeading } from '@/components/section'
-import { galleryCategories, galleryPhotos } from '@/lib/gallery'
+import { galleryCategories, galleryPhotos, type GalleryCategorySlug } from '@/lib/gallery'
+import { galleryVideos } from '@/lib/videos'
+import { HomeVideoCard } from './home-video-card'
 
-const featuredIds = [2, 1, 18, 14, 28, 21]
+/**
+ * One photo per category, each audited as a true example of that category.
+ * Commercial appears once only: 02 is a large elevated array on a commercial
+ * rooftop with no domestic features.
+ */
+const featuredIds = [2, 18, 11, 28]
 
 const categoryLabels = new Map(galleryCategories.map((category) => [category.slug, category.label]))
 
+/** Guard: a category label may only appear once in this preview grid. */
+function dedupeByCategory(photos: (typeof galleryPhotos)[number][]) {
+  const seen = new Set<GalleryCategorySlug>()
+  return photos.filter((photo) => {
+    if (seen.has(photo.category)) {
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn(
+          `[HomeGallery] Duplicate category "${photo.category}" in the featured grid; photo ${photo.id} was skipped.`,
+        )
+      }
+      return false
+    }
+    seen.add(photo.category)
+    return true
+  })
+}
+
 export function HomeGallery() {
-  const featured = featuredIds
-    .map((id) => galleryPhotos.find((photo) => photo.id === id))
-    .filter((photo): photo is (typeof galleryPhotos)[number] => Boolean(photo))
+  const featured = dedupeByCategory(
+    featuredIds
+      .map((id) => galleryPhotos.find((photo) => photo.id === id))
+      .filter((photo): photo is (typeof galleryPhotos)[number] => Boolean(photo)),
+  )
+  const homeVideo = galleryVideos.find((video) => video.id === 'samar-40kw-solar-epc')
 
   return (
     <Section
@@ -28,8 +55,8 @@ export function HomeGallery() {
       <div className="relative">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f4c65e]">
-              <span aria-hidden="true" className="h-px w-10 bg-[#f4c65e]/70" />
+            <p className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f39a32]">
+              <span aria-hidden="true" className="h-px w-10 bg-[#f39a32]/70" />
               Project Photo Gallery
             </p>
             <SectionHeading
@@ -46,6 +73,9 @@ export function HomeGallery() {
         </div>
 
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {homeVideo && (
+            <HomeVideoCard video={homeVideo} categoryLabel="Rooftop Solar Projects" />
+          )}
           {featured.map((photo) => (
             <li key={photo.id}>
               <Link
@@ -63,7 +93,7 @@ export function HomeGallery() {
                   />
                   <div
                     aria-hidden="true"
-                    className="absolute inset-0 bg-gradient-to-t from-[#03120e]/85 via-[#03120e]/10 to-transparent"
+                    className="absolute inset-0 bg-gradient-to-t from-[#061e3a]/85 via-[#061e3a]/10 to-transparent"
                   />
                   <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/90 backdrop-blur">
                     {categoryLabels.get(photo.category)}
@@ -72,7 +102,7 @@ export function HomeGallery() {
                     <p className="max-w-[85%] text-sm font-semibold leading-snug text-white md:text-[15px]">
                       {photo.caption}
                     </p>
-                    <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-white/20 bg-black/25 text-[#f4c65e] backdrop-blur transition-colors group-hover:bg-[#f4c65e] group-hover:text-[#1b1408]">
+                    <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-white/20 bg-black/25 text-[#f39a32] backdrop-blur transition-colors group-hover:bg-[#f39a32] group-hover:text-[#243447]">
                       <ArrowRight aria-hidden="true" className="size-4" />
                     </span>
                   </div>
@@ -84,12 +114,12 @@ export function HomeGallery() {
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
           <p className="flex items-center gap-2 text-sm text-white/65">
-            <Images aria-hidden="true" className="size-4 text-[#a6e65a]" />
-            31 photographs across rooftop, commercial, residential, solar pump, and site-work categories.
+            <Images aria-hidden="true" className="size-4 text-[#f39a32]" />
+            31 photographs and site videos across rooftop, commercial, residential, solar pump, and site-work categories.
           </p>
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#f4c65e] transition-colors hover:text-[#ffe7a3]"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#f39a32] transition-colors hover:text-[#ffb35c]"
           >
             Browse the complete portfolio
             <ArrowRight aria-hidden="true" className="size-4" />

@@ -21,10 +21,10 @@ export function Section({
       aria-labelledby={labelledBy}
       className={cn(
         'relative overflow-hidden py-20 md:py-28 lg:py-32',
-        tone === 'default' && 'bg-[linear-gradient(180deg,#ddebe1_0%,#e8dcc4_100%)]',
-        tone === 'muted' && 'bg-[linear-gradient(135deg,#d8e7dc_0%,#cfe3d8_50%,#e6dcc7_100%)]',
-        tone === 'soft' && 'bg-[linear-gradient(135deg,#cfe7df_0%,#ddebe1_45%,#e8dcc4_100%)]',
-        tone === 'ink' && 'bg-gradient-to-br from-[#062d24] via-[#0b3a31] to-[#151c1b] text-ink-foreground',
+        tone === 'default' && 'bg-[linear-gradient(180deg,#ffffff_0%,#f5f7fa_100%)]',
+        tone === 'muted' && 'bg-[linear-gradient(135deg,#f5f7fa_0%,#ffffff_50%,#f5f7fa_100%)]',
+        tone === 'soft' && 'bg-[linear-gradient(135deg,#f5f7fa_0%,#ffffff_45%,#f5f7fa_100%)]',
+        tone === 'ink' && 'bg-gradient-to-br from-[#073b70] via-[#0a3565] to-[#0b2a4a] text-ink-foreground',
         className,
       )}
     >
@@ -71,7 +71,7 @@ export function SectionHeading({
         id={id}
         className={cn(
           'mt-5 text-3xl font-extrabold leading-[1.08] tracking-tight md:text-4xl lg:text-5xl',
-          tone === 'ink' ? 'text-ink-foreground' : 'text-foreground',
+          tone === 'ink' ? 'text-ink-foreground' : 'text-[#073b70]',
         )}
       >
         {title}

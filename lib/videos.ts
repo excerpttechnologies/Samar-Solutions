@@ -10,10 +10,21 @@ export type GalleryVideo = {
 }
 
 /**
- * Site videos supplied by the company. Both are vertical (portrait) clips, so
- * the player is width-constrained rather than stretched to 16:9.
+ * Site videos supplied by the company. Portrait clips are width-constrained in
+ * the player rather than stretched; the 40 kW EPC clip is standard 16:9.
  */
 export const galleryVideos: GalleryVideo[] = [
+  {
+    id: 'samar-40kw-solar-epc',
+    title: '40 kW Rooftop Solar EPC — Samar Solutions',
+    caption:
+      'A 40 kW rooftop solar EPC installation completed by Samar Solutions, with rows of panels and yellow safety railings on site.',
+    src: '/videos/samar-40kw-solar-epc.mp4',
+    poster: '/videos/samar-40kw-solar-epc-poster.jpg',
+    width: 1920,
+    height: 1080,
+    orientation: 'landscape',
+  },
   {
     id: 'solar-water-pump',
     title: 'Solar-Powered Water Pump — Samar Solutions',

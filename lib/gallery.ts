@@ -47,7 +47,7 @@ export const galleryCategories: GalleryCategory[] = [
   },
   {
     slug: 'pole-foundation',
-    label: 'Pole Foundation & Grounding',
+    label: 'Installation & Grounding',
     description: 'Foundation, grounding, and site work supporting solar infrastructure.'
   },
   {

@@ -33,7 +33,7 @@ export default function CareersPage() {
         intro="We value people who care about quality, safety, and doing the job right. If you’re interested in renewable energy and electric mobility, we’d like to hear from you."
         cta={false}
       />
-      <Section labelledBy="careers-why-title" className="bg-[linear-gradient(135deg,#e8dcc4_0%,#ddebe1_50%,#d4e8dc_100%)]">
+      <Section labelledBy="careers-why-title" className="bg-[linear-gradient(135deg,#f5f7fa_0%,#ffffff_50%,#eef4fb_100%)]">
         <SectionHeading
           id="careers-why-title"
           eyebrow="Why Work With SAMAR"
@@ -53,7 +53,7 @@ export default function CareersPage() {
         </ul>
       </Section>
 
-      <Section tone="soft" labelledBy="careers-areas-title" className="bg-[linear-gradient(135deg,#062d24_0%,#087a55_55%,#087f83_100%)]">
+      <Section tone="soft" labelledBy="careers-areas-title" className="bg-[linear-gradient(135deg,#073b70_0%,#00529b_55%,#239b68_100%)]">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-6">
             <SectionHeading

@@ -5,6 +5,7 @@ import { AudienceList, CtaBand, Disclaimer, ScopeGrid } from '@/components/block
 import { CtaLink } from '@/components/cta-link'
 import { PageHero } from '@/components/page-hero'
 import { Section, SectionHeading } from '@/components/section'
+import { CONTACT } from '@/lib/contact'
 import { solarAudiences, solarScope } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ export default function SolarPage() {
         imageNote={null}
       />
 
-      <Section labelledBy="solar-intro-title" className="bg-[linear-gradient(135deg,#e8dcc4_0%,#ddebe1_50%,#f6e7b8_100%)]">
+      <Section labelledBy="solar-intro-title" className="bg-[linear-gradient(135deg,#f5f7fa_0%,#ffffff_50%,#f5f7fa_100%)]">
         <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-5">
             <SectionHeading
@@ -56,7 +57,7 @@ export default function SolarPage() {
         </div>
       </Section>
 
-      <Section tone="soft" labelledBy="solar-scope-title" className="bg-[linear-gradient(135deg,#062d24_0%,#087a55_50%,#0d7a6a_100%)]">
+      <Section tone="soft" labelledBy="solar-scope-title" className="bg-[linear-gradient(135deg,#073b70_0%,#00529b_50%,#239b68_100%)]">
         <SectionHeading
           id="solar-scope-title"
           tone="ink"
@@ -70,7 +71,7 @@ export default function SolarPage() {
         </div>
       </Section>
 
-      <Section labelledBy="solar-who-title" className="overflow-hidden bg-[linear-gradient(180deg,#f2e6c9_0%,#ddebe1_100%)]">
+      <Section labelledBy="solar-who-title" className="overflow-hidden bg-[linear-gradient(180deg,#f5f7fa_0%,#ffffff_100%)]">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-5">
             <SectionHeading
@@ -102,7 +103,7 @@ export default function SolarPage() {
         </div>
       </Section>
 
-      <Section tone="muted" labelledBy="solar-expect-title" className="bg-[linear-gradient(135deg,#dcefe2_0%,#e8dcc4_60%,#f4dba0_100%)]">
+      <Section tone="muted" labelledBy="solar-expect-title" className="bg-[linear-gradient(135deg,#eef4fb_0%,#f5f7fa_60%,#f5f7fa_100%)]">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <SectionHeading
             id="solar-expect-title"
@@ -120,7 +121,7 @@ export default function SolarPage() {
               <Image src="/images/projects/20-rooftop-solar-residential-view.webp" alt="Solar panels installed on a rooftop overlooking a residential area" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             </div>
             <div className="flex flex-wrap gap-3">
-              <CtaLink href="tel:+918105250250" arrow>
+              <CtaLink href={`tel:${CONTACT.primary.tel}`} arrow>
                 Call for a Site Survey
               </CtaLink>
               <CtaLink href="/ev-charging-solutions" variant="outline">

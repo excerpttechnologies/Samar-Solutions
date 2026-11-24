@@ -32,7 +32,7 @@ export default function GalleryPage() {
       <Section
         id="photo-gallery"
         labelledBy="gallery-title"
-        className="bg-[linear-gradient(180deg,#062d24_0%,#0b3a31_42%,#151c1b_100%)] pt-16 text-white md:pt-20"
+        className="bg-[linear-gradient(180deg,#073b70_0%,#0a3565_42%,#0b2a4a_100%)] pt-16 text-white md:pt-20"
       >
         <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
@@ -41,10 +41,10 @@ export default function GalleryPage() {
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
               Thirty-one photographs documenting solar panels, rooftops, commercial arrays, mounting
-              systems, solar pumps, and pole foundation work. Select any image for a full-screen view.
+              systems, solar pumps, and installation and grounding work. Select any image for a full-screen view.
             </p>
           </div>
-          <p className="shrink-0 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#a6e65a]">
+          <p className="shrink-0 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#f39a32]">
             31 Photographs
           </p>
         </div>
@@ -56,8 +56,7 @@ export default function GalleryPage() {
         <div id="videos" className="mt-16 border-t border-white/10 pt-14">
           <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">Videos</h2>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
-            Watch our team and completed installations on site. Videos are vertical field footage;
-            select play to load and watch a clip.
+            Watch our team and completed installations on site. Select play to load and watch a clip.
           </p>
           <VideoGallery />
         </div>

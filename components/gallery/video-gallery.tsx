@@ -10,7 +10,11 @@ function VideoCard({ video }: { video: GalleryVideo }) {
 
   return (
     <article className="flex flex-col gap-4 rounded-[1.5rem] border border-white/10 bg-white/5 p-4 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.9)]">
-      <div className="mx-auto w-full max-w-[22rem]">
+      <div
+        className={
+          video.orientation === 'landscape' ? 'w-full' : 'mx-auto w-full max-w-[22rem]'
+        }
+      >
         {playing ? (
           <video
             className="h-auto w-full rounded-[1.25rem] bg-black"
@@ -40,9 +44,9 @@ function VideoCard({ video }: { video: GalleryVideo }) {
               height={video.height}
               className="h-auto w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
             />
-            <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#03120e]/70 via-transparent to-transparent" />
+            <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#061e3a]/70 via-transparent to-transparent" />
             <span className="absolute inset-0 flex items-center justify-center">
-              <span className="inline-flex size-16 items-center justify-center rounded-full bg-[#f4c65e] text-[#1b1408] shadow-xl transition-transform duration-300 group-hover:scale-110">
+              <span className="inline-flex size-16 items-center justify-center rounded-full bg-[#f39a32] text-[#243447] shadow-xl transition-transform duration-300 group-hover:scale-110">
                 <Play aria-hidden="true" className="ml-0.5 size-6 fill-current" />
               </span>
             </span>

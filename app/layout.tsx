@@ -1,7 +1,8 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Manrope, Plus_Jakarta_Sans } from 'next/font/google'
-import { phones, site, socialLinks } from '@/lib/site'
+import { phones } from '@/lib/contact'
+import { site, socialLinks } from '@/lib/site'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#062d24',
+  themeColor: '#00529b',
 }
 
 const organizationJsonLd = {

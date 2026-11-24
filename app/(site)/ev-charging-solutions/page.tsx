@@ -5,6 +5,7 @@ import { AudienceList, CtaBand, Disclaimer, ScopeGrid } from '@/components/block
 import { CtaLink } from '@/components/cta-link'
 import { PageHero } from '@/components/page-hero'
 import { Section, SectionHeading } from '@/components/section'
+import { CONTACT } from '@/lib/contact'
 import { evAudiences, evScope } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function EvPage() {
         imageAlt="Electric vehicle charging infrastructure"
       />
 
-      <Section labelledBy="ev-types-title" className="bg-[linear-gradient(180deg,#151c1b_0%,#0f2420_55%,#062d24_100%)] text-white">
+      <Section labelledBy="ev-types-title" className="bg-[linear-gradient(180deg,#0b2a4a_0%,#073b70_55%,#073b70_100%)] text-white">
         <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-5">
             <SectionHeading
@@ -41,9 +42,9 @@ export default function EvPage() {
               title="AC, DC, residential, commercial, and fleet charging infrastructure"
               intro="We assess site conditions, electrical capacity, and expected usage to recommend a practical EV charging solution."
             />
-            <div className="mt-8 rounded-2xl border border-[#a6e65a]/25 bg-[#a6e65a]/8 p-5 shadow-[0_0_0_1px_rgba(166,230,90,0.08),0_20px_50px_-30px_rgba(166,230,90,0.35)]">
+            <div className="mt-8 rounded-2xl border border-[#f39a32]/25 bg-[#f39a32]/8 p-5 shadow-[0_0_0_1px_rgba(166,230,90,0.08),0_20px_50px_-30px_rgba(166,230,90,0.35)]">
               <div className="flex items-center gap-3">
-                <Building2 aria-hidden="true" className="size-5 text-[#a6e65a]" />
+                <Building2 aria-hidden="true" className="size-5 text-[#f39a32]" />
                 <h3 className="font-heading font-bold">Site-first planning</h3>
               </div>
               <p className="mt-2 text-sm leading-relaxed text-white/72">Charger type, quantity, and infrastructure are planned around your location, users, and available electrical capacity.</p>
@@ -51,8 +52,8 @@ export default function EvPage() {
           </div>
           <ul className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
             {chargingTypes.map((item) => (
-              <li key={item.title} className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 backdrop-blur transition-all hover:-translate-y-0.5 hover:border-[#a6e65a]/30 hover:bg-white/8">
-                <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-[#a6e65a]/15 text-[#a6e65a] shadow-[0_0_24px_-8px_rgba(166,230,90,0.7)]">
+              <li key={item.title} className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 backdrop-blur transition-all hover:-translate-y-0.5 hover:border-[#f39a32]/30 hover:bg-white/8">
+                <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-[#f39a32]/15 text-[#f39a32] shadow-[0_0_24px_-8px_rgba(166,230,90,0.7)]">
                   <item.icon aria-hidden="true" className="size-5" />
                 </span>
                 <h3 className="mt-5 text-xl font-bold tracking-tight">{item.title}</h3>
@@ -63,7 +64,7 @@ export default function EvPage() {
         </div>
       </Section>
 
-      <Section tone="soft" labelledBy="ev-scope-title" className="bg-[linear-gradient(135deg,#062d24_0%,#087f83_45%,#151c1b_100%)]">
+      <Section tone="soft" labelledBy="ev-scope-title" className="bg-[linear-gradient(135deg,#073b70_0%,#239b68_45%,#0b2a4a_100%)]">
         <SectionHeading
           id="ev-scope-title"
           tone="ink"
@@ -77,7 +78,7 @@ export default function EvPage() {
         </div>
       </Section>
 
-      <Section labelledBy="ev-who-title" className="bg-[linear-gradient(180deg,#ddebe1_0%,#cfe5d8_100%)]">
+      <Section labelledBy="ev-who-title" className="bg-[linear-gradient(180deg,#ffffff_0%,#eef4fb_100%)]">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
           <SectionHeading
             id="ev-who-title"
@@ -119,7 +120,7 @@ export default function EvPage() {
         </div>
       </Section>
 
-      <Section labelledBy="ev-expect-title" className="bg-[linear-gradient(135deg,#e8dcc4_0%,#ddebe1_100%)]">
+      <Section labelledBy="ev-expect-title" className="bg-[linear-gradient(135deg,#f5f7fa_0%,#ffffff_100%)]">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <SectionHeading id="ev-expect-title" eyebrow="Planning Your Site" title="Start with a site assessment" />
           <div className="space-y-6">
@@ -129,7 +130,7 @@ export default function EvPage() {
               requirements with our team to confirm which equipment is available for your project.
             </Disclaimer>
             <div className="flex flex-wrap gap-3">
-              <CtaLink href="tel:+918105250250" arrow>
+              <CtaLink href={`tel:${CONTACT.primary.tel}`} arrow>
                 Call Our Team
               </CtaLink>
               <CtaLink href="/epc-services" variant="outline">

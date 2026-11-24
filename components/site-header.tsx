@@ -4,7 +4,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import { mainNav, phones, site } from '@/lib/site'
+import { phones } from '@/lib/contact'
+import { mainNav, site } from '@/lib/site'
 import { cn } from '@/lib/utils'
 import { BrandLogo } from './brand-logo'
 import { SocialLinks } from './social-links'
@@ -54,25 +55,25 @@ export function SiteHeader({ partnership }: { partnership?: string }) {
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-all duration-300',
         transparent
-          ? 'border-b border-white/10 bg-transparent text-white'
-          : 'border-b border-white/10 bg-[#062d24]/88 text-white shadow-[0_18px_40px_-28px_rgba(2,12,10,0.9)] backdrop-blur-xl',
+          ? 'border-b border-[#00529b]/10 bg-white/90 text-[#243447] backdrop-blur-md'
+          : 'border-b border-[#00529b]/10 bg-white/97 text-[#243447] shadow-[0_12px_30px_-24px_rgba(7,59,112,0.45)] backdrop-blur-xl',
       )}
     >
       <div
         className={cn(
           'hidden overflow-hidden border-b transition-colors md:block',
-          transparent ? 'border-white/10 bg-black/20' : 'border-white/10 bg-[#041f19]/70',
+          transparent ? 'border-[#00529b]/10 bg-white' : 'border-[#00529b]/10 bg-[#f5f7fa]',
         )}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 md:px-6">
-          <p className="hidden min-w-0 items-center gap-3 py-2 text-[11px] font-medium uppercase tracking-[0.16em] text-white/80 lg:flex">
-            <span aria-hidden="true" className="inline-block size-1.5 shrink-0 rounded-full bg-[#a6e65a] shadow-[0_0_0_4px_rgba(166,230,90,0.15)]" />
+          <p className="hidden min-w-0 items-center gap-3 py-2 text-[11px] font-medium uppercase tracking-[0.16em] text-[#073b70]/80 lg:flex">
+            <span aria-hidden="true" className="inline-block size-1.5 shrink-0 rounded-full bg-[#239b68] shadow-[0_0_0_4px_rgba(35,155,104,0.15)]" />
             <span className="truncate">{partnership ?? site.partnership}</span>
           </p>
           <div className="flex w-full items-center justify-between gap-3 lg:w-auto lg:justify-end">
-            <div className="flex items-center gap-3 text-[12px] font-semibold tracking-wide text-white/85">
+            <div className="flex items-center gap-3 text-[12px] font-semibold tracking-wide text-[#073b70]">
               {phones.map((phone) => (
-                <a key={phone.href} href={phone.href} className="whitespace-nowrap transition-colors hover:text-[#f4c65e]">
+                <a key={phone.href} href={phone.href} className="whitespace-nowrap transition-colors hover:text-[#00529b]">
                   {phone.label}
                 </a>
               ))}
@@ -82,7 +83,7 @@ export function SiteHeader({ partnership }: { partnership?: string }) {
         </div>
       </div>
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:px-6 lg:h-[4.75rem]">
-        <BrandLogo tone="light" size="md" priority className="shrink-0" />
+        <BrandLogo tone="dark" size="md" priority className="shrink-0" />
 
         <nav aria-label="Main" className="hidden xl:block">
           <ul className="flex items-center gap-0.5">
@@ -94,8 +95,8 @@ export function SiteHeader({ partnership }: { partnership?: string }) {
                     href={item.href}
                     aria-current={active ? 'page' : undefined}
                     className={cn(
-                      'whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-all hover:bg-white/10',
-                      active ? 'bg-white/10 text-[#f4c65e]' : 'text-white/88',
+                      'whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-all hover:bg-[#00529b]/8 hover:text-[#00529b]',
+                      active ? 'bg-[#00529b]/10 text-[#00529b]' : 'text-[#243447]/85',
                     )}
                   >
                     {item.label}
@@ -110,7 +111,7 @@ export function SiteHeader({ partnership }: { partnership?: string }) {
           <button
             ref={toggleRef}
             type="button"
-            className="inline-flex size-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition-colors hover:bg-white/10 xl:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-full border border-[#00529b]/20 bg-[#00529b]/5 text-[#073b70] transition-colors hover:bg-[#00529b]/10 xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
@@ -125,19 +126,19 @@ export function SiteHeader({ partnership }: { partnership?: string }) {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="absolute inset-x-0 top-full h-[calc(100dvh-4rem)] overflow-y-auto border-t border-white/10 bg-[#062d24]/98 pb-24 text-white backdrop-blur-xl xl:hidden"
+          className="absolute inset-x-0 top-full h-[calc(100dvh-4rem)] overflow-y-auto border-t border-[#00529b]/10 bg-white pb-24 text-[#243447] xl:hidden"
         >
           <ul className="mx-auto flex max-w-7xl flex-col px-4 py-4 md:px-6">
             {mainNav.map((item) => {
               const active = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href)
               return (
-                <li key={item.href} className="border-b border-white/10">
+                <li key={item.href} className="border-b border-[#00529b]/10">
                   <Link
                     href={item.href}
                     aria-current={active ? 'page' : undefined}
                     className={cn(
                       'block py-4 font-heading text-xl font-semibold tracking-tight',
-                      active ? 'text-[#f4c65e]' : 'text-white',
+                      active ? 'text-[#00529b]' : 'text-[#073b70]',
                     )}
                   >
                     {item.label}
@@ -145,9 +146,9 @@ export function SiteHeader({ partnership }: { partnership?: string }) {
                 </li>
               )
             })}
-            <li className="flex flex-wrap gap-x-5 gap-y-2 pt-6 text-sm font-semibold text-white">
+            <li className="flex flex-wrap gap-x-5 gap-y-2 pt-6 text-sm font-semibold text-[#073b70]">
               {phones.map((phone) => (
-                <a key={phone.href} href={phone.href} className="hover:text-[#f4c65e]">
+                <a key={phone.href} href={phone.href} className="hover:text-[#00529b]">
                   {phone.label}
                 </a>
               ))}
@@ -155,7 +156,7 @@ export function SiteHeader({ partnership }: { partnership?: string }) {
             <li className="pt-2">
               <SocialLinks />
             </li>
-            <li className="pt-5 text-xs leading-relaxed text-white/65">
+            <li className="pt-5 text-xs leading-relaxed text-[#687789]">
               {partnership ?? site.partnership}
             </li>
           </ul>

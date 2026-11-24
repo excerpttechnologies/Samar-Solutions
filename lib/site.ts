@@ -1,3 +1,7 @@
+import { CONTACT } from './contact'
+
+export { phones } from './contact'
+
 export const site = {
   name: 'SAMAR SOLUTIONS INDIA PVT. LTD.',
   shortName: 'SAMAR Solutions',
@@ -9,18 +13,12 @@ export const site = {
    * any value left as null renders as a clearly labelled placeholder.
    */
   contact: {
-    phone: '8105 250 250' as string | null,
+    phone: CONTACT.primary.display as string | null,
     email: null as string | null,
     address: null as string | null,
     hours: null as string | null,
   },
 }
-
-/** The only contact numbers approved for use anywhere on the site. */
-export const phones = [
-  { label: '8105 250 250', href: 'tel:+918105250250' },
-  { label: '8197 241 705', href: 'tel:+918197241705' },
-] as const
 
 export const socialLinks = [
   {
@@ -37,6 +35,11 @@ export const socialLinks = [
     id: 'instagram',
     label: 'Samar Solutions on Instagram',
     href: 'https://www.instagram.com/samarsolutions221/',
+  },
+  {
+    id: 'facebook',
+    label: 'Samar Solutions on Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61596963956018',
   },
 ] as const
 
